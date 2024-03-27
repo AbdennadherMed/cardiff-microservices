@@ -14,6 +14,6 @@ public class ConfigserverApplication {
 
     @GetMapping
     public String helloWord(){
-        return "HelloWorld";
+        return "HelloWorld from jenkins";
     }
 }
