@@ -20,16 +20,22 @@ pipeline {
         cleanWs()
       }
     }
+
+
     stage("Checkout from SCM") {
       steps {
         git branch: 'main', credentialsId: 'github', url: 'https://github.com/AbdennadherMed/cardiff-microservices'
       }
     }
+
+
     stage("Build Application") {
       steps {
         sh "mvn clean package"
       }
     }
+
+
     stage("Test Application") {
       steps {
         sh "mvn test"
@@ -50,5 +56,26 @@ pipeline {
         }
       }
     }
+
+
+    stage("Trivy Scan") {
+      steps {
+        script {
+          sh('docker run -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy image ashfaque9x/register-app-pipeline:latest --no-progress --scanners vuln  --exit-code 0 --severity HIGH,CRITICAL --format table')
+        }
+      }
+    }
+
+
+    stage('Cleanup Artifacts') {
+      steps {
+        script {
+          sh "docker rmi ${IMAGE_NAME}:${IMAGE_TAG}"
+          sh "docker rmi ${IMAGE_NAME}:latest"
+        }
+      }
+    }
+
+
   }
 }
