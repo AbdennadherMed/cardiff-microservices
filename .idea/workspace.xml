@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="763cb588-e3e4-422d-bd4e-85ddaa0ea567" name="Changes" comment="modify docker file">
+    <list default="true" id="763cb588-e3e4-422d-bd4e-85ddaa0ea567" name="Changes" comment="add tivy scan and clean artifacts">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -160,7 +161,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711633764472</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add tivy scan and clean artifacts">
+      <option name="closed" value="true" />
+      <created>1711634152927</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1711634152927</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -183,6 +192,7 @@
     <MESSAGE value="remove Jenkins api token" />
     <MESSAGE value="add docker file" />
     <MESSAGE value="modify docker file" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify docker file" />
+    <MESSAGE value="add tivy scan and clean artifacts" />
+    <option name="LAST_COMMIT_MESSAGE" value="add tivy scan and clean artifacts" />
   </component>
 </project>
