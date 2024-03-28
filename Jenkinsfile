@@ -10,7 +10,7 @@ pipeline {
   	    APP_NAME = "config-server-pipeline"
         RELEASE = "1.0.0"
         DOCKER_USER = "abdennadherm"
-        DOCKER_PASS = 'dockerhub'
+        DOCKER_PASS = 'docker_hub'
         IMAGE_NAME = "${DOCKER_USER}" + "/" + "${APP_NAME}"
         IMAGE_TAG = "${RELEASE}-${BUILD_NUMBER}"
   	    JENKINS_API_TOKEN = credentials("JENKINS_API_TOKEN")
